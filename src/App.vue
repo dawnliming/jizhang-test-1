@@ -13,6 +13,7 @@ body{
   text-align: center;
   color: #333;
   line-height: 1.5;
+  font-size: 16px;
   font-family: $font-hei;
 }
 
