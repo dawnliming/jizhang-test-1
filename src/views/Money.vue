@@ -3,7 +3,7 @@
     <NumberPad />
     <Types />
     <Notes />
-    <Tags />
+    <Tags :data-source="tags"/>
   </Layout>
 </template>
 
@@ -12,9 +12,15 @@ import Types from "@/components/Money/Types";
 import Tags from "@/components/Money/Tags";
 import NumberPad from "@/components/Money/NumberPad"
 import Notes from "@/components/Money/Notes";
+
 export default {
   name: "Money",
-  components: {Notes, NumberPad, Tags, Types}
+  components: {Notes, NumberPad, Tags, Types},
+  data(){
+    return{
+      tags: ['衣', '食', '住', '行']
+    }
+  }
 }
 </script>
 
