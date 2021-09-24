@@ -8,7 +8,7 @@ const recordStore = {
         this.recordList = JSON.parse(window.localStorage.getItem(localStorageKeyName) || '[]') as RecordItem[];
         return this.recordList;
     },
-    saveRecord() {
+    saveRecords() {
         window.localStorage.setItem(localStorageKeyName, JSON.stringify(this.recordList));
     },
     createRecord(record: RecordItem) {
@@ -16,7 +16,7 @@ const recordStore = {
         record2.createAt = new Date();
         this.recordList?.push(record2);
         // this.recordList && this.recordList.push(record2);
-        recordStore.saveRecord();
+        recordStore.saveRecords();
     }
 };
 recordStore.fetchRecords();
