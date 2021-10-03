@@ -15,23 +15,38 @@ const routes: Array<RouteConfig> = [
     },
     {
         path: '/money',
-        component: Money
+        component: Money,
+        meta:{
+            title:'记一笔账'
+        }
     },
     {
         path: '/labels',
-        component: Labels
+        component: Labels,
+        meta:{
+            title:'标签一览'
+        }
     },
     {
         path: '/statistics',
-        component: Statistics
+        component: Statistics,
+        meta:{
+            title:'统计一哈'
+        }
     },
     {
        path:'/labels/edit/:id',
-       component: EditLabel
+       component: EditLabel,
+        meta:{
+            title:'管管标签'
+        }
     },
     {
         path: '*',
-        component: NotFound
+        component: NotFound,
+        meta:{
+            title:'网址不对'
+        }
     }
 ];
 
